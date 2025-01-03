@@ -1,7 +1,7 @@
 <br>
 
 ### Introduction
-![Image](https://raw.githubusercontent.com/Gladysid/Images-blog/master/IE-box-pic.png)
+![Image](https://github.com/S2CTransNet/demo/blob/main/fig/pipeline.png)
 This project is a demo version, used for testing and verifying the effectiveness of S2CTransNet. The Complete version will be released later.
 
 ### Structure

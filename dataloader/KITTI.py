@@ -76,17 +76,3 @@ class KITTI(data.Dataset):
 
     def __len__(self):
         return len(self.data)
-
-# class Config:
-#     def __init__(self):
-#         self.n_points = 8192  # 示例值
-#         self.subset = "test"  # 示例值
-#         self.txt_path = "/home/t5820/yal/code_5.0/dataloader/KITTI/test/500-1500.txt"
-#
-#
-#
-# config = Config()
-# dataloder = KITTI(config)
-# data_loader = DataLoader(dataloder, batch_size=1, shuffle=False)
-# for sample in data_loader:
-#     print(sample)

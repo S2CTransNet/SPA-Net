@@ -49,5 +49,7 @@ def test(args=None):
         nps = [1/4,1/2,3/4]
         for np in nps:
             _ = evaluate.validate(module, data_loader['test'], args, visualizer, np)
+    elif args.dataset_name != 'KITTI':
+        _ = evaluate.validate(module, data_loader['test'], args, visualizer)
     else:
         evaluate.val_forward_KITTI(module, data_loader['test'], visualizer)

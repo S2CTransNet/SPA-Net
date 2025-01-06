@@ -13,7 +13,7 @@ def create_cfg(args=None):
     dataset_defaults = {
         'name': args.dataset_name,
         'txt_path': os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'dataloader', f'{args.dataset_name}/test/500-1500.txt'),
-        'n_points': 16384,
+        'n_points': 8192,
         'subset': 'test',
     }
     for subset in ['test']:
@@ -23,8 +23,8 @@ def create_cfg(args=None):
     # Model parameters
     model_defaults = {
         'subset': args.dataset_name,
-        'num_points': 16384,
-        'num_query': 256,
+        'num_points': 8192,
+        'num_query': 512,
         'knn_layer': 1,
         'trans_dim': 384,
         'paths_weight': os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'weight', args.dataset_name),
@@ -35,7 +35,7 @@ def create_cfg(args=None):
         'rebuilder1': 'FoldingNet',
         'rebuilder2': 'FoldingNet',
         'rebuilder3': 'FoldingNet',
-        'rate': [1, 2, 4],
+        'rate': [1, 2, 2],
         'noise': True if args.dataset_name in ['PCN', 'KITTY'] and args.task == 'train' else False,
     }
     for k, v in model_defaults.items():

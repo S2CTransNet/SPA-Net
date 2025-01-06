@@ -9,7 +9,6 @@ This project is a demo version, used for testing and verifying the effectiveness
 Datasets download links:
 [MVP](https://mvp-dataset.github.io/MVP/Registration.html),
 [ShapeNet-55/34](https://github.com/yuxumin/PoinTr/blob/master/DATASET.md ),
-[PCN](https://github.com/wentaoyuan/pcn)
 
 After downloading the dataset, place it according to the following directory:
 ```

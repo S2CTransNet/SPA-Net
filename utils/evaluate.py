@@ -132,6 +132,19 @@ def val_forward(base_model,np,args,test_dataloader,visualizer):
 
         return gt, dense_points, fps, log_dict, crop[0]
 
+def val_forward_KITTI(base_model,test_dataloader,visualizer=None):
+    base_model.eval()
+    print(f'[Auto validate][KITTI]')
+    with torch.no_grad():
+        for idx, sample in enumerate(tqdm(test_dataloader,desc='validate',unit='batch')):
+            partial = sample['partial']
+            partial = partial.to('cuda')
+            ret = base_model(partial)
+            dense_points = ret[-1]
+            # tools.draw(dense_points) # Real time realistic point cloud results
+            # tools.draw(partial) # Real time realistic input point cloud
+            if visualizer is not None:
+                visualizer.visualize_pcd_batch(dense_points, 1, pcd_name=f"car_{idx}")
 
 import logging
 import open3d

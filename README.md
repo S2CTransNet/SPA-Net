@@ -15,16 +15,7 @@ After downloading the dataset, place it according to the following directory:
 ```
 |-- S2CTransNet-demo
     |-- data
-        |-- PCN
-            |-- test
-                |-- partial
-                |-- complete
-            |-- val
-                |-- partial
-                |-- complete
-            |-- train
-                |-- partial
-                |-- complete
+        |-- KITTI
         |-- ShapeNet
             |-- shapenet_pc
         |-- MVP_Benchmark
@@ -58,6 +49,8 @@ We also upload four pretrained weights, which you can download [here]().
 ```
 |-- S2CTransNet-demo
     |-- weight
+        |-- KITTI
+            |-- KITTI_best.pth
         |-- MVP
             |-- MVP_best.pth
         |-- ShapeNet-55

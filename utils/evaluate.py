@@ -141,6 +141,8 @@ def val_forward_KITTI(base_model,test_dataloader,visualizer=None):
             partial = partial.to('cuda')
             ret = base_model(partial)
             dense_points = ret[-1]
+            # tools.draw(dense_points) # Real time realistic point cloud results
+            # tools.draw(partial) # Real time realistic input point cloud
             if visualizer is not None:
                 visualizer.visualize_pcd_batch(dense_points, 1, pcd_name=f"car_{idx}")
 

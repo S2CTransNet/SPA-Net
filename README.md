@@ -110,5 +110,5 @@ python main.py --use_yaml --dataset_name ShapeNet-55
 python main.py --seen_type Seen-34 --dataset_name ShapeNet-34
 
 # Use your own defined data path and cannot be used with use_yaml at same time.
-python main.py --dataset_path /path/to/your/dataset
+python main.py --dataset_path /path/to/your/dataset --dataset_name MVP
 ```

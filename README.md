@@ -100,15 +100,16 @@ bash install.sh
 To evaluate a pre-trained S2CTransNet on the these dataset with single GPU, run:
 
 ```
+# It is necessary to create a cfg files.
+python cfgs/create_cfgs.py
+
 # Evaluate on KITTI
 python main.py --dataset_name KITTI
 
 # Evaluate with cfg.yaml (Can only be used after comlpeting one evaluation for each dataset)
-python main.py --use_yaml --dataset_name ShapeNet-55
+python main.py --dataset_name ShapeNet-55
 
 # Evaluate on ShapeNet-34 with Seen type
 python main.py --seen_type Seen-34 --dataset_name ShapeNet-34
 
-# Use your own defined data path and cannot be used with use_yaml at same time.
-python main.py --dataset_path /path/to/your/dataset --dataset_name MVP
 ```

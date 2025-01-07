@@ -284,7 +284,7 @@ class net_builder_(nn.Module):
             f_2 = self.up_sampler(Q[-1].transpose(1, 2))
             q = self.fusion(torch.cat([f_1, f_2], 1), 'res').transpose(1, 2)
             build_points, _ = self.rebuilder3(q=q, coarse_point_cloud=build_points_.reshape(B, -1, 3), feature_last=building_feature)
-            if self.subset in ['MVP']:
+            if self.subset in ['MVP','KITTI']:
                 if denoise_length is not None:
                     pred_fine = build_points[:, : -denoise_length*self.rate[-1]].reshape(B, -1, 3).contiguous()
                     pred_medium = build_points_[:, : -denoise_length].reshape(B, -1, 3).contiguous()

@@ -8,6 +8,7 @@ import yaml
 
 def get_cfg(args):
     dataset_name = args.dataset_name#.replace("-", "")
+    seen_type = args.seen_type
     filename = f'cfgs/{dataset_name}.yaml'
     module_name = f'cfgs.cfgs_{dataset_name}'
     try:
@@ -22,6 +23,10 @@ def get_cfg(args):
     else:
         with open(filename, 'r', encoding='utf-8') as file:
             args = yaml.safe_load(file)
+            if dataset_name == 'ShapeNet-34':
+                path_parts = (args['dataset']['test']['data_path']).split('/')
+                path_parts[-1] = seen_type
+                args['dataset']['test']['data_path'] = '/'.join(path_parts)
     config = tools.DotDict(args)
     return config
 

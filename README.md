@@ -8,13 +8,17 @@ This project is a demo version, used for testing and verifying the effectiveness
 
 Datasets download links:
 [MVP](https://mvp-dataset.github.io/MVP/Registration.html),
-[ShapeNet-55/34](https://github.com/yuxumin/PoinTr/blob/master/DATASET.md ),
+[ShapeNet-55/34](https://github.com/yuxumin/PoinTr/blob/master/DATASET.md ), The data contains ten KITTI vehicle point clouds for testing
 
 After downloading the dataset, place it according to the following directory:
 ```
 |-- S2CTransNet-demo
     |-- data
         |-- KITTI
+            |-- README.tex
+            |--partial_0.npy
+            |--partial_1.npy
+            |--...
         |-- ShapeNet
             |-- shapenet_pc
         |-- MVP_Benchmark
@@ -49,7 +53,7 @@ We also upload four pretrained weights, which you can download [here]().
 |-- S2CTransNet-demo
     |-- weight
         |-- KITTI
-            |-- KITTI_best.pth
+            |-- KITTI_best.pth #pretraned on other dataset
         |-- MVP
             |-- MVP_best.pth
         |-- ShapeNet-55

@@ -8,7 +8,7 @@ This project is a demo version, used for testing and verifying the effectiveness
 
 Datasets download links:
 [MVP](https://mvp-dataset.github.io/MVP/Registration.html),
-[ShapeNet-55/34](https://github.com/yuxumin/PoinTr/blob/master/DATASET.md ), The data contains ten KITTI vehicle point clouds for testing
+[ShapeNet-55/34](https://github.com/yuxumin/PoinTr/blob/master/DATASET.md ), The _data_ contains ten KITTI vehicle point clouds for testing
 
 After downloading the dataset, place it according to the following directory:
 ```

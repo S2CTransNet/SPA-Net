@@ -12,7 +12,7 @@ def create_cfg(args=None):
     # Dataset parameters
     dataset_defaults = {
         'name': args.dataset_name,
-        'txt_path': os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'dataloader', f'{args.dataset_name}/test/500-1500.txt'),
+        'txt_path': os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'dataloader', f'{args.dataset_name}/test.txt'),
         'n_points': 8192,
         'subset': 'test',
     }

@@ -41,6 +41,7 @@ class MainOpt:
         self.p.add_argument('--task', type=str, default='test', help='Type of task.')
         self.p.add_argument("--dataset_path", type=str, default=f'{os.path.dirname(__file__)}/data',
                             help='The parent path of dataset.')
+        self.p.add_argument('--seen_type', type=str, default='Unseen-21', help='Require from ShapeNet-34.("Seen-34" or "Unseen-21")')
 
     def parse(self, **kwargs):
         self.opt = self.p.parse_args(**kwargs)

@@ -54,7 +54,7 @@ class KITTI(data.Dataset):
         self.data = []
         for line in npy_file_list:
             path = f'{os.path.dirname(BASE_DIR)}/data/KITTI/{line}'
-            self.data.append(np.load(path)[:,:3])
+            self.data.append(np.load(path)[0])
         print(f'[DATASET] {len(self.data)} {self.subset}ing instances were loaded')
 
     def pc_norm(self, pc):

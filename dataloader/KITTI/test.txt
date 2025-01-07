@@ -1,0 +1,10 @@
+partial_0.npy
+partial_1.npy
+partial_2.npy
+partial_3.npy
+partial_4.npy
+partial_5.npy
+partial_6.npy
+partial_7.npy
+partial_8.npy
+partial_9.npy

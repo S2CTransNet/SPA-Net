@@ -48,7 +48,7 @@ We uploaded the final test results including all categories of datasets stored i
                 |-- AVG.csv
                 |-- Simple.csv
 ```
-We also upload four pretrained weights, which you can download [here]().  
+We also upload four pretrained weights, which you can download on [Baidu Netdisk](https://pan.baidu.com/s/1V56LM15zNZ4fppC73QoHNQ?pwd=wxs5)(password:wxs5) or.  
 ```
 |-- S2CTransNet-demo
     |-- weight

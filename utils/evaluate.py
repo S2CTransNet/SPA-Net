@@ -109,6 +109,7 @@ def val_forward(base_model,np,args,test_dataloader,visualizer):
                         log_dict[taxonomy_id]['dense_points'] = dense_points
                         log_dict[taxonomy_id]['sparse_points'] = ret[0]
             else:
+                start_time = time.time()
                 partial = sample['partial'].to('cuda')
                 ret = base_model(partial)
                 dense_points = ret[-1]

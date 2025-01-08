@@ -2,7 +2,7 @@
 
 ### Introduction
 ![Image](https://github.com/S2CTransNet/demo/blob/main/fig/pipeline.png)
-This project is a demo version, used for testing and verifying the effectiveness of S2CTransNet. The Complete version will be released later.
+This project is a demo version, used for testing and verifying the effectiveness of S2CTransNet. The Complete version will be uploaded after acceptance.
 
 ### Structure
 
@@ -112,4 +112,10 @@ python main.py --dataset_name ShapeNet-55
 # Evaluate on ShapeNet-34 with Seen type
 python main.py --seen_type Seen-34 --dataset_name ShapeNet-34
 
+```
+### Check Results
+After evaluation，you can go to the _results_ directory to view the results, or use _tool.draw()_ to draw point clouds in real time. If you want to have detailed results,run:
+```
+# Click the generated link to view the results, which are usually: http://localhost:6006/
+tensoboard --logdir=logs
 ```

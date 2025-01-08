@@ -7,6 +7,7 @@ class MainOpt:
         self.p = argparse.ArgumentParser(description="Main options")
         self.p.add_argument('--dataset_name', type=str, default='ShapeNet-34', help='Dataset name.')
         self.p.add_argument('--use_yaml', action='store_true', default=True, help='If use the config.yaml file.')
+        self.p.add_argument('--task', type=str, default='test', help='Type of task.')
         self.p.add_argument('--seen_type', type=str, default='Unseen-21', help='Require from ShapeNet-34.("Seen-34" or "Unseen-21")')
 
     def parse(self, **kwargs):

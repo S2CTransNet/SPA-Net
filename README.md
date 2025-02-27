@@ -117,6 +117,6 @@ python main.py --seen_type Seen-34 --dataset_name ShapeNet-34
 After evaluation, you can go to the _results_ directory to view the results, or use _tool.draw()_ to draw point clouds in real time. If you want to have detailed results, run:
 ```
 # Click the generated link to view the results, which are usually: http://localhost:6006/
-tensoboard --logdir=logs
+tensorboard --logdir=logs
 ```
 

@@ -12,7 +12,7 @@ Datasets download links:
 
 After downloading the dataset, place it according to the following directory:
 ```
-|-- SPA-Net-demo
+|-- SPA-Net
     |-- data
         |-- KITTI
             |-- README.tex

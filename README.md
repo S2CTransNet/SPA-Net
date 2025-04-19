@@ -1,8 +1,8 @@
 <br>
 
 ### Introduction
-![Image](https://github.com/S2CTransNet/demo/blob/main/fig/pipeline.png)
-This project is a demo version, used for testing and verifying the effectiveness of S2CTransNet. The Complete version will be uploaded after acceptance.
+![Image](https://github.com/S2CTransNet/SPA-Net/blob/main/fig/pipeline.png)
+This project is a demo version, used for testing and verifying the effectiveness of SPA-Net. The Complete version will be uploaded after acceptance.
 
 ### Structure
 
@@ -12,7 +12,7 @@ Datasets download links:
 
 After downloading the dataset, place it according to the following directory:
 ```
-|-- S2CTransNet-demo
+|-- SPA-Net-demo
     |-- data
         |-- KITTI
             |-- README.tex
@@ -27,7 +27,7 @@ After downloading the dataset, place it according to the following directory:
 ```
 We uploaded the final test results including all categories of datasets stored in _.csv_ format. You can found it in _results_.
 ```
-|-- S2CTransNet-demo
+|-- SPA-Net
     |-- results
         |-- MVP
             |-- Overall.csv
@@ -50,7 +50,7 @@ We uploaded the final test results including all categories of datasets stored i
 ```
 We also upload four pretrained weights, which you can download on [Google Drive](https://drive.google.com/file/d/1fUr3C1xoc4PtUV5UAvO0zUct7r-o6anT/view?usp=drive_link) or [Baidu Netdisk](https://pan.baidu.com/s/1V56LM15zNZ4fppC73QoHNQ?pwd=wxs5) (password:wxs5).  
 ```
-|-- S2CTransNet-demo
+|-- SPA-Net
     |-- weight
         |-- KITTI
             |-- KITTI_best.pth #pretraned on other dataset
@@ -97,7 +97,7 @@ bash install.sh
 ```
 ### Evaluation
 
-To evaluate a pre-trained S2CTransNet on the these dataset with single GPU, run:
+To evaluate a pre-trained SPA-Net on the these dataset with single GPU, run:
 
 ```
 # It is necessary to create a cfg files.

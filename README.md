@@ -2,7 +2,7 @@
 
 ### Introduction
 ![Image](https://github.com/S2CTransNet/SPA-Net/tree/main/fig/pipeline.png)
-This project is a demo version, used for testing and verifying the effectiveness of SPA-Net. The Complete version will be uploaded after acceptance.
+We provide this inference implementation to reproduce and validate the experimental findings reported in the paper.
 
 ### Structure
 

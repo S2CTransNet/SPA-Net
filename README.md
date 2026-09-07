@@ -2,8 +2,7 @@
 
 ### Introduction
 ![Image](https://github.com/S2CTransNet/SPA-Net/tree/main/fig/pipeline.png)
-This inference-only release serves as a practical validation vehicle for the core claims presented in the paper.
-
+This repository serves as the inference implementation for validating the paper's claims, with the latest inference outputs preserved in the result directory.
 ### Structure
 
 Datasets download links:

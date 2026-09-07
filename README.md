@@ -2,7 +2,7 @@
 
 ### Introduction
 ![Image](https://github.com/S2CTransNet/SPA-Net/tree/main/fig/pipeline.png)
-We provide this inference implementation to reproduce and validate the experimental findings reported in the paper.
+This inference-only release serves as a practical validation vehicle for the core claims presented in the paper.
 
 ### Structure
 

@@ -118,4 +118,15 @@ After evaluation, you can go to the _results_ directory to view the results, or 
 # Click the generated link to view the results, which are usually: http://localhost:6006/
 tensorboard --logdir=logs
 ```
+### Citation
 
+If you find this work useful for your research, please consider citing our paper:
+
+```bibtex
+@ARTICLE{SPA-Net,
+  author={Qin, Xiaofei and Yi, Anluo and Wang, Wei and He, Changxiang and Wang, Lin and Tao, Shiwei and Zhang, Xuedian and Dong, Qiulei},
+  journal={IEEE Transactions on Multimedia}, 
+  title={SPA-Net: Skeletal-to-Whole Point Cloud Completion Via Progressive Off-attention Neighboring Feature Aggregation}, 
+  year={2026},
+  doi={10.1109/TMM.2026.3718221}
+}

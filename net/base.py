@@ -6,7 +6,7 @@ from net.rebuilder import *
 from net.model import *
 from utils.tools import *
 from torch import nn
-from knn_cuda import KNN
+from utils.point_ops import KNN
 from extensions.chamfer_dist import ChamferDistanceL1, ChamferDistanceL2
 knn = KNN(k=8, transpose_mode=False)
 from timm.layers import DropPath, trunc_normal_

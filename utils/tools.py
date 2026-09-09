@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 from torch.optim.lr_scheduler import _LRScheduler
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from pointnet2_ops import pointnet2_utils
+from utils.point_ops import pointnet2_utils
 import random
 import torch.nn.functional as F
 

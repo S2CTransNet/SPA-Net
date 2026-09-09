@@ -3,6 +3,8 @@
 ### Introduction
 ![Image](https://github.com/S2CTransNet/SPA-Net/tree/main/fig/pipeline.png)
 This repository serves as the inference implementation for validating the paper's claims, with the latest inference outputs preserved in the result directory.
+
+This branch targets recent NVIDIA GPUs (for example RTX 50-series). For older GPUs, use the **main** branch.
 ### Structure
 
 Datasets download links:
@@ -50,6 +52,8 @@ We uploaded the final test results including all categories of datasets stored i
 We also upload four pretrained weights, which you can download on [Google Drive](https://drive.google.com/file/d/1fUr3C1xoc4PtUV5UAvO0zUct7r-o6anT/view?usp=drive_link) or [Baidu Netdisk](https://pan.baidu.com/s/1V56LM15zNZ4fppC73QoHNQ?pwd=wxs5) (password:wxs5).  
 ```
 |-- SPA-Net
+    |-- pointnet2_ops
+    |-- KNN_CUDA
     |-- weight
         |-- KITTI
             |-- KITTI_best.pth #pretraned on other dataset
@@ -63,36 +67,22 @@ We also upload four pretrained weights, which you can download on [Google Drive]
 
 ### Requirement
 
-- h5py==3.12.1
-- numpy==1.24.3
-- open3d==0.18.0
-- plotly==5.24.1
-- setuptools==75.1.0
-- timm==1.0.12
-- torch==1.13.0
-- torchvision==0.14.0
-- tqdm==4.66.5
-- transforms3d==0.4.2
-- ninja==1.11.1.3
-- python == 3.10
-- CUDA == 11.7
-```
-pip install -r requirements.txt
+This branch is for newer GPUs. Older GPUs should use **main**.
 
-# Suggest using the following command to install torch and torchvision
-pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
-```
-In addition, pointnet2_ops and KNN_CUDA are also necessary.
-```
-# PointNet++
-pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointnet2_ops&subdirectory=pointnet2_ops_lib"
-# GPU kNN
-pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
-```
-Chamfer-dist and EMD are used for metric evaluation, and the source code is from [PoinTR](https://github.com/yuxumin/PoinTr/tree/master).
-```
-# Chamfer Distance and EMD
+Need Python 3.10, an NVIDIA driver that supports the installed GPU, `git`, and `g++` (`sudo apt install -y build-essential git`).
+
+```bash
+conda create -n spanet python=3.10 -y
+conda activate spanet
+cd /path/to/SPA-Net
 bash install.sh
+```
+
+`install.sh` installs PyTorch (CUDA wheels from pytorch.org), Python deps, the CUDA compiler headers, then Chamfer / EMD / PointNet++ / KNN_CUDA. It prefers `./pointnet2_ops` and `./KNN_CUDA` (a local `.whl` or source tree). If those directories are missing, it clones them.
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0), torch.cuda.is_available())"
+python -c "from utils.point_ops import _pn2, _CudaKNN; print('pointnet2', _pn2 is not None, 'knn_cuda', _CudaKNN is not None); import chamfer; print('chamfer ok')"
 ```
 ### Evaluation
 

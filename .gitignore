@@ -1,0 +1,6 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+KNN_CUDA/knn_cuda/csrc/_ext/
+*.so

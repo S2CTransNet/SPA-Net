@@ -1,8 +1,7 @@
 import torch
 from torch import nn
 from timm.layers import DropPath
-from pointnet2_ops import pointnet2_utils
-from knn_cuda import KNN
+from utils.point_ops import KNN, pointnet2_utils
 from net.model import Mlp, Attention
 knn = KNN(k=16, transpose_mode=False)
 
